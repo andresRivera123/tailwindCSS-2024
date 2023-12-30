@@ -10,7 +10,7 @@ Esto nos permite reutilizar clases de utilidad en nuestros proyectos</p>
 
 <li>Tailwind CSS Intellisense</li>
 
-## Instalación
+## Instalación 
 <ol>
     <li>Instalar node.js, verificar con el comando: <b>node -v</b></li>
     <li>Crear un arhivo package.json :<b> npm init -y </b></li>

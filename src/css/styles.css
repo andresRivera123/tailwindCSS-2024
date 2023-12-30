@@ -593,6 +593,10 @@ video {
   margin-right: auto;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -638,6 +642,10 @@ video {
   max-width: 140px;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .translate-x-full {
   --tw-translate-x: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -655,8 +663,22 @@ video {
   justify-content: space-between;
 }
 
+.justify-items-center {
+  justify-items: center;
+}
+
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .rounded-md {
@@ -668,20 +690,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .bg-open-menu {
   background-image: url(../00-conceptos-landing/images//icon-hamburger.svg);
-}
-
-.bg-none {
-  background-image: none;
 }
 
 .from-white\/70 {
@@ -706,8 +720,9 @@ video {
   padding: 3rem;
 }
 
-.p-0 {
-  padding: 0px;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .text-center {
@@ -718,6 +733,11 @@ video {
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -725,6 +745,16 @@ video {
 .text-dark-blue {
   --tw-text-opacity: 1;
   color: hsl(228 39% 23% / var(--tw-text-opacity));
+}
+
+.text-dark-grayish-blue {
+  --tw-text-opacity: 1;
+  color: hsl(227 12% 61% / var(--tw-text-opacity));
+}
+
+.text-very-dark-blue {
+  --tw-text-opacity: 1;
+  color: hsl(233 12% 13% / var(--tw-text-opacity));
 }
 
 .shadow-2xl {
@@ -739,8 +769,29 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-bright-red\/30 {
   --tw-shadow-color: hsl(12 88% 59% / 0.3);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-bright-red {
+  --tw-shadow-color: hsl(12, 88%, 59%);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-bright-red\/50 {
+  --tw-shadow-color: hsl(12 88% 59% / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-bright-red\/40 {
+  --tw-shadow-color: hsl(12 88% 59% / 0.4);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -765,9 +816,43 @@ video {
   background-image: url(../00-conceptos-landing/images/icon-close.svg);;
 }
 
+@media (min-width: 640px) {
+  .sm\:grid-flow-col {
+    grid-auto-flow: column;
+  }
+
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .sm\:justify-items-start {
+    justify-items: start;
+  }
+
+  .sm\:p-24 {
+    padding: 6rem;
+  }
+
+  .sm\:text-start {
+    text-align: start;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:static {
     position: static;
+  }
+
+  .md\:order-1 {
+    order: 1;
+  }
+
+  .md\:m-0 {
+    margin: 0px;
   }
 
   .md\:hidden {
@@ -788,9 +873,14 @@ video {
     grid-auto-flow: column;
   }
 
-  .md\:bg-green-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
   }
 
   .md\:bg-transparent {
@@ -805,16 +895,21 @@ video {
     padding: 0px;
   }
 
-  .md\:transition-none {
-    transition-property: none;
+  .md\:p-24 {
+    padding: 6rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
 @media (min-width: 1024px) {
-  .lg\:static {
-    position: static;
-  }
-
   .lg\:block {
     display: block;
   }
