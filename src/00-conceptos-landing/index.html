@@ -24,7 +24,7 @@
           class="bg-open-menu w-6 h-5 bg-cover bg-center cursor-pointer peer-checked:bg-close-menu transition-all z-50 md:hidden"
         ></label>
         <div
-          class="fixed inset-0 bg-gradient-to-b from-white/70 to-black/70 translate-x-full peer-checked:translate-x-0 transition-transform md:static md:bg-none md:translate-x-0"
+          class="fixed inset-0 bg-gradient-to-b from-white/70 to-black/70 translate-x-full peer-checked:translate-x-0 transition-transform z-40 md:static md:bg-none md:translate-x-0"
         >
           <ul
             class="absolute inset-x-0 top-24 p-12 bg-white w-[90%] mx-auto rounded-md h-max text-center grid gap-6 font-bold text-dark-blue shadow-2xl md:w-max md:bg-transparent md:p-0 md:grid-flow-col md:static"
@@ -66,6 +66,9 @@
         </article>
       </section>
     </header>
+    <figure class="absolute inset-0 overflow-hidden pointer-events-none">
+      <img src="./images/bg-tablet-pattern.svg" alt="fondo" class="absolute w-full -z-10 -top-28 -right-1/4 max-w-2xl" />
+    </figure>
     <main>
       <section
         class="wrapper text-center py-24 grid gap-12 md:grid-cols-2 md:text-left"
@@ -160,11 +163,89 @@
       </section>
 
       <section class="bg-bright-red font-bold">
-        <div class="wrapper py-24 text-center grid gap-8 md:grid-cols-[40%_40%] md:justify-between md:items-center md:text-left">
-          <h2 class="text-4xl text-very-pale-red">Simplify how your team works today.</h2>
-          <a href="#" class="button text-bright-red bg-vary-light-gray mx-auto md:mx-0 md:justify-self-end">Get Started</a>
+        <div
+          class="wrapper py-24 text-center grid gap-8 md:grid-cols-[40%_40%] md:justify-between md:items-center md:text-left"
+        >
+          <h2 class="text-4xl text-very-pale-red">
+            Simplify how your team works today.
+          </h2>
+          <a
+            href="#"
+            class="button text-bright-red bg-vary-light-gray mx-auto md:mx-0 md:justify-self-end"
+            >Get Started</a
+          >
         </div>
       </section>
     </main>
+    <footer class="bg-very-dark-blue py-24">
+      <section
+        class="wrapper grid gap-12 justify-items-center footer-area md:footer-area-md md:grid-cols-3 md:justify-items-stretch"
+      >
+        <form class="flex gap-4 w-full min-w-[100px] [grid-area:form]">
+          <input
+            type="email"
+            placeholder="Updates in your inbox..."
+            class="min-w-[50px] flex-1 rounded-full px-4"
+          />
+          <input
+            type="submit"
+            value="GO"
+            class="py-3 px-8 bg-bright-red rounded-full text-white"
+          />
+        </form>
+        <nav
+          class="grid grid-cols-[max-content_max-content] gap-y-4 justify-between text-white w-4/5 [grid-area:navigation] md:w-full"
+        >
+          <a href="#">Home</a>
+          <a href="#">Pricing</a>
+          <a href="#">Products</a><a href="#">About us</a>
+          <a href="#">Careers</a>
+          <a href="#">Community</a>
+          <a href="#">Privacy Polity</a>
+        </nav>
+        <div
+          class="flex flex-wrap gap-4 justify-between w-full [grid-area:social-media]"
+        >
+          <a href="#"
+            ><img
+              src="./images/icon-facebook.svg"
+              alt="Facebook image"
+              class="w-8"
+          /></a>
+          <a href="#"
+            ><img
+              src="./images/icon-youtube.svg"
+              alt="Youtube image"
+              class="w-8"
+          /></a>
+          <a href="#"
+            ><img
+              src="./images/icon-twitter.svg"
+              alt="Twitter image"
+              class="w-8"
+          /></a>
+          <a href="#"
+            ><img
+              src="./images/icon-pinterest.svg"
+              alt="Pinterest image"
+              class="w-8"
+          /></a>
+          <a href="#"
+            ><img
+              src="./images/icon-instagram.svg"
+              alt="Instagram image"
+              class="w-8"
+          /></a>
+        </div>
+        <a href="#" class="[grid-area:logo]">
+          <img src="./images/logo.svg" alt="Logo imagen" />
+        </a>
+        <p
+          class="text-dark-grayish-blue text-center [grid-area:copy] md:text-right"
+        >
+          Copyright 2020. All Rights reserved
+        </p>
+      </section>
+    </footer>
   </body>
 </html>
