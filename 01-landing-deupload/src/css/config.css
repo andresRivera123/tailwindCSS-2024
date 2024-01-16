@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'sofia-medium';
+    src: url("../font/SofiaProMedium.ttf");
+}
+
+@font-face{
+    font-family: 'sofia-regular';
+    src: url("../font/SofiaProRegular.ttf");
+}
+
 @layer components {
   .button-secondary {
-    @apply text-dark-purple rounded-xl border-solid border-2 border-dark-purple  flex py-[9px] px-[17px] items-center justify-center font-bold
+    @apply text-dark-purple font-sofia-regular rounded-xl border-solid border-2 border-dark-purple  flex py-[9px] px-[28px] items-center justify-center font-bold
   }
 
   .button-primary {
-    @apply bg-primary-purple text-white rounded-xl border-solid border-2 border-primary-purple  flex py-[9px] px-[17px] items-center justify-center font-bold
+    @apply bg-primary-purple font-sofia-regular text-white rounded-xl border-solid border-2 border-primary-purple  flex py-[9px] px-[28px] items-center justify-center font-bold
   }
 
 }
